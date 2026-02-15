@@ -53,8 +53,16 @@ def compute_average(event):
     # Compute average
     average = (score1 + score2 + score3 +score4) / 4
 
-    # Determine pass/fail
-    if average >= 95:
+    # Determine pass/fail and checks if grades are valid
+    if score1 > 100 or score1 < 0:
+        result = "Please input a valid grade"
+    elif score2 > 100 or score2 < 0:
+        result = "Please input a valid grade"
+    elif score3 > 100 or score3 < 0:
+        result = "Please input a valid grade"
+    elif score4 > 100 or score4 < 0:
+        result = "Please input a valid grade"
+    elif average >= 95:
         result = "Eligible. Input this in the regiment selector to join the M.P."
     else:
         result = "Not Eligible for Military Police"
